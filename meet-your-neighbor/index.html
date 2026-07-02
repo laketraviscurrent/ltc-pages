@@ -1,0 +1,551 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meet Your Neighbor | Lake Travis Current</title>
+<meta name="description" content="Meet Your Neighbor — profiles of the people who make the Lake Travis community what it is, from Lakeway to Spicewood, from the Lake Travis Current.">
+<link rel="canonical" href="https://pages.laketraviscurrent.com/meet-your-neighbor/">
+<meta property="og:title" content="Meet Your Neighbor | Lake Travis Current">
+<meta property="og:description" content="Meet Your Neighbor — profiles of the people who make the Lake Travis community what it is, from Lakeway to Spicewood, from the Lake Travis Current.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pages.laketraviscurrent.com/meet-your-neighbor/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&amp;display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: light; }
+  body { background: #FCF9F5; margin: 0; }
+  /* ---------------- Brand design system (matches /advertise, /local-events, /features) ---------------- */
+  .ltc-neighbors {
+    --paper:      #FCF9F5;
+    --paper-2:    #faf7f1;
+    --card:       #ffffff;
+    --ink:        #1c2326;
+    --ink-soft:   #2a2a2a;
+    --body:       #3a4549;
+    --muted:      #7a868b;
+    --line:       #e4e1d9;
+    --line-soft:  #efece5;
+    --accent:      #CE661F;   /* terracotta */
+    --accent-dark: #a85317;
+    --accent-soft: #fbeee2;
+    --teal:        #526B72;
+    --teal-dark:   #3a4f55;
+    --gold:        #B8895A;
+    --cedar:       #2d4a3e;
+    --shadow:    0 12px 32px rgba(28, 35, 38, 0.10);
+    --shadow-sm: 0 2px 8px rgba(28, 35, 38, 0.06);
+    --radius: 6px;
+    --serif: 'Playfair Display', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    --lede:  'Playfair Display', Georgia, serif;
+    --font:  Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 28px 80px;
+    color: var(--body);
+    font-family: var(--font);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .ltc-neighbors * { box-sizing: border-box; }
+  /* ---------------- Hero ---------------- */
+  .ltc-neighbors .hero { padding: 8px 0 6px; }
+  .ltc-neighbors .eyebrow {
+    font-family: var(--serif);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 18px;
+  }
+  .ltc-neighbors .eyebrow .dot { color: var(--accent); }
+  .ltc-neighbors h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 0 0 16px;
+  }
+  .ltc-neighbors h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
+  .ltc-neighbors .lede {
+    font-family: var(--lede);
+    font-style: italic;
+    font-size: clamp(17px, 1.7vw, 22px);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: none;
+  }
+  /* ---------------- Toolbar / meta strip ---------------- */
+  .ltc-neighbors .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 30px 0 26px;
+    padding: 16px 20px;
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+  }
+  .ltc-neighbors .toolbar__meta {
+    font-size: 14px;
+    color: var(--body);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-wrap: wrap;
+  }
+  .ltc-neighbors .toolbar__meta b { color: var(--ink); font-weight: 700; }
+  .ltc-neighbors .pin { color: var(--accent); font-size: 15px; line-height: 1; }
+  .ltc-neighbors .view-toggle {
+    display: inline-flex;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px;
+    box-shadow: var(--shadow-sm);
+  }
+  .ltc-neighbors .view-toggle button {
+    appearance: none; background: transparent; border: 0; cursor: pointer;
+    font-family: var(--serif);
+    font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted);
+    padding: 9px 18px; border-radius: 999px;
+    transition: background .2s ease, color .2s ease;
+  }
+  .ltc-neighbors .view-toggle button[aria-pressed="true"] { background: var(--teal); color: #fff; }
+  .ltc-neighbors .view-toggle button:not([aria-pressed="true"]):hover { color: var(--teal); }
+  /* ---------------- Card grid ---------------- */
+  .ltc-neighbors .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  .ltc-neighbors .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .ltc-neighbors .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px -22px rgba(20, 16, 10, 0.30);
+    border-color: #d9d3c8;
+  }
+  /* Cover — real photo with gradient + monogram fallback */
+  .ltc-neighbors .card__cover {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, var(--c1), var(--c2));
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px 18px;
+  }
+  .ltc-neighbors .card__photo {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .ltc-neighbors .card__cover::after {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(120% 90% at 85% -10%, rgba(255,255,255,0.16), transparent 60%),
+      linear-gradient(180deg, rgba(0,0,0,0.04) 30%, rgba(0,0,0,0.42));
+    pointer-events: none;
+    z-index: 1;
+  }
+  .ltc-neighbors .card__mark {
+    position: absolute;
+    right: 8px; bottom: -22px;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 150px;
+    line-height: 1;
+    color: rgba(255,255,255,0.18);
+    user-select: none;
+    z-index: 0;
+  }
+  .ltc-neighbors .card__kicker {
+    position: relative; z-index: 2;
+    font-family: var(--serif);
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #fff;
+    background: rgba(20, 18, 14, 0.42);
+    backdrop-filter: blur(2px);
+    padding: 6px 11px; border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .ltc-neighbors .card__tag {
+    position: absolute; top: 14px; left: 16px; z-index: 2;
+    font-family: var(--serif);
+    font-size: 9.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(255,255,255,0.95);
+    text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+  }
+  .ltc-neighbors .card__body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+  .ltc-neighbors .card__meta {
+    font-family: var(--serif);
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--muted);
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 11px;
+  }
+  .ltc-neighbors .card__meta .dot { color: var(--line); }
+  .ltc-neighbors .card__meta .role { color: var(--teal); }
+  .ltc-neighbors .card__title {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 1.18;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+    margin: 0 0 10px;
+  }
+  .ltc-neighbors .card__excerpt {
+    font-family: var(--lede);
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--body);
+    margin: 0 0 18px;
+  }
+  .ltc-neighbors .card__more {
+    margin-top: auto;
+    font-family: var(--serif);
+    font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--accent);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .ltc-neighbors .card__more .arrow { transition: transform .25s ease; }
+  .ltc-neighbors .card:hover .card__more .arrow { transform: translateX(4px); }
+  /* ---------------- Empty state ---------------- */
+  .ltc-neighbors .state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 64px 24px;
+    border: 1px dashed var(--line);
+    border-radius: var(--radius);
+    background: var(--paper-2);
+  }
+  .ltc-neighbors .state h3 {
+    font-family: var(--serif); font-weight: 700; font-size: 22px; color: var(--ink); margin: 0 0 8px;
+  }
+  .ltc-neighbors .state p { font-family: var(--lede); font-style: italic; font-size: 16px; color: var(--muted); margin: 0; }
+  /* ---------------- Footer CTA ---------------- */
+  .ltc-neighbors .cta {
+    margin-top: 56px;
+    padding: 36px 40px;
+    background: var(--teal);
+    color: #fff;
+    border-radius: var(--radius);
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px;
+  }
+  .ltc-neighbors .cta h3 { font-family: var(--serif); font-weight: 700; font-size: 23px; margin: 0 0 6px; color: #fff; }
+  .ltc-neighbors .cta p { font-family: var(--lede); font-style: italic; font-size: 16px; margin: 0; color: rgba(255,255,255,0.85); max-width: 520px; }
+  .ltc-neighbors .cta a {
+    background: var(--accent); color: #fff; text-decoration: none;
+    padding: 14px 26px; border-radius: 999px;
+    font-family: var(--serif); font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+    white-space: nowrap; transition: background .2s ease;
+  }
+  .ltc-neighbors .cta a:hover { background: var(--accent-dark); }
+  /* ---------------- Responsive ---------------- */
+  @media (max-width: 640px) {
+    .ltc-neighbors { padding: 14px 16px 64px; }
+    .ltc-neighbors .grid { grid-template-columns: 1fr; gap: 18px; }
+    .ltc-neighbors .toolbar { flex-direction: column; align-items: stretch; }
+    .ltc-neighbors .view-toggle { align-self: flex-start; }
+    .ltc-neighbors .cta { padding: 26px 22px; }
+  }
+</style>
+<style>
+  body { margin: 0; background: #FCF9F5; }
+  .ltc-topnav {
+    position: sticky; top: 0; z-index: 1000;
+    background: rgba(252, 249, 245, 0.97);
+    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    border-bottom: 1px solid #e4e1d9;
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  }
+  .ltc-topnav-in {
+    max-width: 1200px; margin: 0 auto; padding: 14px 28px;
+    display: flex; align-items: center; flex-wrap: wrap; gap: 10px 22px;
+  }
+  .ltc-topnav .ltc-wordmark {
+    font-weight: 700; font-size: 19px; letter-spacing: -0.01em;
+    color: #1c2326; text-decoration: none; white-space: nowrap; margin-right: auto; border: none;
+  }
+  .ltc-topnav .ltc-wordmark:hover { color: #526B72; }
+  .ltc-navlinks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 20px; }
+  .ltc-navlinks a {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    color: #3a4549; text-decoration: none; padding: 6px 0; border: none;
+  }
+  .ltc-navlinks a:hover { color: #526B72; }
+  .ltc-navlinks a.ltc-subbtn {
+    background: #526B72; color: #ffffff; padding: 9px 18px; border-radius: 999px;
+    font-size: 10.5px; letter-spacing: 0.18em; transition: background 0.2s ease;
+  }
+  .ltc-navlinks a.ltc-subbtn:hover { background: #3a4f55; color: #ffffff; }
+  @media (max-width: 700px) {
+    .ltc-topnav-in { padding: 12px 16px; gap: 8px 14px; }
+    .ltc-topnav .ltc-wordmark { font-size: 16px; }
+    .ltc-navlinks { gap: 4px 12px; }
+    .ltc-navlinks a { font-size: 10px; }
+    .ltc-navlinks a.ltc-subbtn { padding: 8px 14px; }
+  }
+  .ltc-sitefoot {
+    background: #1c2326; color: #cfd6d4; text-align: left;
+    font-family: Georgia, 'Times New Roman', serif;
+    padding: 56px 28px 28px; margin-top: 0;
+  }
+  .ltc-sitefoot .ltc-foot-in {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, minmax(160px, 1fr)); gap: 36px;
+  }
+  .ltc-sitefoot h4 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    color: #B8895A; margin: 0 0 14px;
+  }
+  .ltc-sitefoot ul { list-style: none; margin: 0; padding: 0; }
+  .ltc-sitefoot li { margin: 0 0 9px; }
+  .ltc-sitefoot a {
+    color: #cfd6d4; text-decoration: none; border: none;
+    font-size: 14.5px; line-height: 1.5;
+  }
+  .ltc-sitefoot a:hover { color: #ffffff; }
+  .ltc-foot-bottom {
+    max-width: 1200px; margin: 44px auto 0; padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 12.5px; color: #8d989b;
+  }
+  @media (max-width: 700px) {
+    .ltc-sitefoot { padding: 44px 20px 24px; }
+    .ltc-sitefoot .ltc-foot-in { grid-template-columns: 1fr 1fr; gap: 28px; }
+  }
+</style>
+</head>
+<body>
+<nav class="ltc-topnav" aria-label="Lake Travis Current">
+  <div class="ltc-topnav-in">
+    <a class="ltc-wordmark" href="https://www.laketraviscurrent.com/">Lake Travis Current</a>
+    <div class="ltc-navlinks">
+      <a href="/events/">Events</a>
+      <a href="/live-music/">Live Music</a>
+      <a href="/restaurants/">Restaurants</a>
+      <a href="/happy-hours/">Happy Hours</a>
+      <a href="/features/">Guides</a>
+      <a class="ltc-subbtn" href="https://www.laketraviscurrent.com/subscribe">Subscribe</a>
+    </div>
+  </div>
+</nav>
+<main>
+<section class="ltc-neighbors">
+
+  <header class="hero">
+    <p class="eyebrow">From The Current</p>
+    <h1>Meet Your <em>Neighbor</em></h1>
+    <p class="lede">The people who make life around the lake what it is — the teachers, makers, musicians, and good souls next door. One neighbor at a time, in their own words.</p>
+  </header>
+
+  <div class="toolbar">
+    <div class="toolbar__meta">
+      <span id="meta-text">Real neighbors. Real stories. Our Lake Travis community.</span>
+    </div>
+    <div class="view-toggle" role="group" aria-label="Sort order">
+      <button type="button" data-sort="newest" aria-pressed="true">Newest</button>
+      <button type="button" data-sort="oldest" aria-pressed="false">Oldest</button>
+    </div>
+  </div>
+
+  <div class="grid" id="grid" aria-live="polite"><a class="card" href="https://www.laketraviscurrent.com/p/lake-travis-run-club" target="_blank" rel="noopener" style="--c1:#CE661F;--c2:#a85317"><div class="card__cover"><img class="card__photo" src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/e162026f-8191-4104-b50d-493a82a539f5/ltc_runclubarticle.png" alt="Lake Travis Run Club" loading="lazy" onerror="this.style.display='none'"><span class="card__tag">Meet Your Neighbor</span><span class="card__mark" aria-hidden="true">L</span><span class="card__kicker">Lake Travis</span></div><div class="card__body"><div class="card__meta"><span>Jun 25, 2026</span><span class="dot">·</span><span class="role">A running community for all skill levels</span></div><h3 class="card__title">Lake Travis Run Club</h3><p class="card__excerpt">Two neighbors set out to find a run club — and ended up building one instead.</p><span class="card__more">Read their story <span class="arrow" aria-hidden="true">→</span></span></div></a><a class="card" href="https://www.laketraviscurrent.com/p/debra-rosen" target="_blank" rel="noopener" style="--c1:#526B72;--c2:#3a4f55"><div class="card__cover"><img class="card__photo" src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/c0a90471-5b32-4abe-9de2-35e9f0fd658f/ltcurrent_debrarosen_thumbnail.png?t=1780587182" alt="Debra Rosen" loading="lazy" onerror="this.style.display='none'"><span class="card__tag">Meet Your Neighbor</span><span class="card__mark" aria-hidden="true">D</span><span class="card__kicker">Lakeway</span></div><div class="card__body"><div class="card__meta"><span>Jun 4, 2026</span><span class="dot">·</span><span class="role">Hudson Bend Middle School History Teacher</span></div><h3 class="card__title">Debra Rosen</h3><p class="card__excerpt">LTISD's Secondary Teacher of the Year is still proving that great teachers leave a lasting impact.</p><span class="card__more">Read their story <span class="arrow" aria-hidden="true">→</span></span></div></a><a class="card" href="https://www.laketraviscurrent.com/p/presley-grace" target="_blank" rel="noopener" style="--c1:#2d4a3e;--c2:#46695a"><div class="card__cover"><img class="card__photo" src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b13ac671-001f-47c6-8e7a-99f21b5681c1/ltcurrent_presleygracewebsite.png?t=1780541866" alt="Presley Grace" loading="lazy" onerror="this.style.display='none'"><span class="card__tag">Meet Your Neighbor</span><span class="card__mark" aria-hidden="true">P</span><span class="card__kicker">Lakeway</span></div><div class="card__body"><div class="card__meta"><span>Jun 2, 2026</span><span class="dot">·</span><span class="role">Lakeway's Rising Singer-Songwriter</span></div><h3 class="card__title">Presley Grace</h3><p class="card__excerpt">At 20, Presley Grace Trevino is turning Lake Travis stages into a launchpad.</p><span class="card__more">Read their story <span class="arrow" aria-hidden="true">→</span></span></div></a></div>
+
+  <div class="cta">
+    <div>
+      <h3>Know a neighbor we should feature?</h3>
+      <p>The best stories around the lake come from you. Tell us who we should meet next.</p>
+    </div>
+    <a href="https://tally.so/r/wQOL1G" target="_blank" rel="noopener">Nominate a Neighbor</a>
+  </div>
+
+</section>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ------------------------------------------------------------------
+     NEIGHBORS — newest first. Prepend one object to add a profile.
+     ------------------------------------------------------------------ */
+  var NEIGHBORS = [
+    {
+      name:  "Lake Travis Run Club",
+      role:  "A running community for all skill levels",
+      place: "Lake Travis",
+      hook:  "Two neighbors set out to find a run club — and ended up building one instead.",
+      date:  "2026-06-25",
+      url:   "https://www.laketraviscurrent.com/p/lake-travis-run-club",
+      photo: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/e162026f-8191-4104-b50d-493a82a539f5/ltc_runclubarticle.png"
+    },
+    {
+      name:  "Debra Rosen",
+      role:  "Hudson Bend Middle School History Teacher",
+      place: "Lakeway",
+      hook:  "LTISD's Secondary Teacher of the Year is still proving that great teachers leave a lasting impact.",
+      date:  "2026-06-04",
+      url:   "https://www.laketraviscurrent.com/p/debra-rosen",
+      photo: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/c0a90471-5b32-4abe-9de2-35e9f0fd658f/ltcurrent_debrarosen_thumbnail.png?t=1780587182"
+    },
+    {
+      name:  "Presley Grace",
+      role:  "Lakeway's Rising Singer-Songwriter",
+      place: "Lakeway",
+      hook:  "At 20, Presley Grace Trevino is turning Lake Travis stages into a launchpad.",
+      date:  "2026-06-02",
+      url:   "https://www.laketraviscurrent.com/p/presley-grace",
+      photo: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b13ac671-001f-47c6-8e7a-99f21b5681c1/ltcurrent_presleygracewebsite.png?t=1780541866"
+    }
+  ];
+
+  // Stable brand cover palettes (fallback when a card has no photo).
+  var PALETTES = [
+    ["#CE661F", "#a85317"], // terracotta
+    ["#526B72", "#3a4f55"], // teal
+    ["#2d4a3e", "#46695a"], // cedar
+    ["#B8895A", "#8c6438"], // gold
+    ["#c45a3b", "#8f3d28"], // clay
+    ["#1c2326", "#3a4549"]  // deep ink
+  ];
+
+  var grid     = document.getElementById("grid");
+  var metaText = document.getElementById("meta-text");
+  var LS_KEY   = "ltc_neighbors_sort";
+  var sort     = (function(){ try { return localStorage.getItem(LS_KEY) || "newest"; } catch(e){ return "newest"; } })();
+
+  function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
+    return ({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" })[c]; }); }
+
+  function fmtDate(iso){
+    if (!iso) return "";
+    var d = new Date(iso);
+    if (isNaN(d)) return "";
+    return d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  }
+
+  function cardHTML(c, i){
+    var pal  = PALETTES[i % PALETTES.length];
+    var mark = (c.name || "C").trim().charAt(0).toUpperCase();
+    var date = fmtDate(c.date);
+    var photo = c.photo
+      ? '<img class="card__photo" src="' + esc(c.photo) + '" alt="' + esc(c.name) +
+        '" loading="lazy" onerror="this.style.display=&#39;none&#39;">'
+      : '';
+    return '<a class="card" href="' + esc(c.url) + '" target="_blank" rel="noopener" ' +
+              'style="--c1:' + pal[0] + ';--c2:' + pal[1] + '">' +
+             '<div class="card__cover">' +
+               photo +
+               '<span class="card__tag">Meet Your Neighbor</span>' +
+               '<span class="card__mark" aria-hidden="true">' + esc(mark) + '</span>' +
+               (c.place ? '<span class="card__kicker">' + esc(c.place) + '</span>' : '') +
+             '</div>' +
+             '<div class="card__body">' +
+               '<div class="card__meta">' +
+                 (date ? '<span>' + esc(date) + '</span>' : '') +
+                 (date && c.role ? '<span class="dot">·</span>' : '') +
+                 (c.role ? '<span class="role">' + esc(c.role) + '</span>' : '') +
+               '</div>' +
+               '<h3 class="card__title">' + esc(c.name) + '</h3>' +
+               (c.hook ? '<p class="card__excerpt">' + esc(c.hook) + '</p>' : '') +
+               '<span class="card__more">Read their story <span class="arrow" aria-hidden="true">&rarr;</span></span>' +
+             '</div>' +
+           '</a>';
+  }
+
+  function render(){
+    if (!NEIGHBORS.length){
+      grid.innerHTML = '<div class="state"><h3>No neighbors just yet</h3>' +
+        '<p>Once a profile is tagged “Meet Your Neighbor,” it shows up here.</p></div>';
+      metaText.innerHTML = '';
+      return;
+    }
+    var list = NEIGHBORS.slice().sort(function(a, b){
+      var da = new Date(a.date).getTime() || 0, db = new Date(b.date).getTime() || 0;
+      return sort === "oldest" ? da - db : db - da;
+    });
+    grid.innerHTML = list.map(cardHTML).join("");
+    metaText.innerHTML = 'Real neighbors. Real stories. Our Lake Travis community.';
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-sort]"), function(btn){
+    btn.setAttribute("aria-pressed", btn.getAttribute("data-sort") === sort ? "true" : "false");
+    btn.addEventListener("click", function(){
+      sort = btn.getAttribute("data-sort");
+      try { localStorage.setItem(LS_KEY, sort); } catch(e){}
+      Array.prototype.forEach.call(document.querySelectorAll("[data-sort]"), function(b){
+        b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+      });
+      render();
+    });
+  });
+
+  render();
+})();
+</script>
+</main>
+<footer class="ltc-sitefoot">
+  <div class="ltc-foot-in">
+    <div>
+      <h4>Read</h4>
+      <ul>
+        <li><a href="https://www.laketraviscurrent.com/">Latest Issue</a></li>
+        <li><a href="https://www.laketraviscurrent.com/archive">Archive</a></li>
+        <li><a href="https://www.laketraviscurrent.com/subscribe">Subscribe</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Discover</h4>
+      <ul>
+        <li><a href="/events/">Local Events</a></li>
+        <li><a href="/live-music/">Live Music</a></li>
+        <li><a href="/happy-hours/">Happy Hours</a></li>
+        <li><a href="/restaurants/">Restaurants</a></li>
+        <li><a href="/farmers-markets/">Farmers Markets</a></li>
+        <li><a href="/community-updates/">Community Updates</a></li>
+        <li><a href="/features/">Features &amp; Guides</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>About</h4>
+      <ul>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/advertise/">Advertise</a></li>
+        <li><a href="/submit-event/">Submit an Event</a></li>
+        <li><a href="/meet-your-neighbor/">Meet Your Neighbor</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ltc-foot-bottom">© 2026 Lake Travis Current.</div>
+</footer>
+
+
+</body></html>

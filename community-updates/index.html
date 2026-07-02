@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lake Travis Community Updates | Lake Travis Current</title>
+<meta name="description" content="Lake Travis community updates — new openings, closures, civic news and neighborly notes from Lakeway, Bee Cave, Spicewood &amp; Lago Vista, updated weekly.">
+<link rel="canonical" href="https://pages.laketraviscurrent.com/community-updates/">
+<meta property="og:title" content="Lake Travis Community Updates | Lake Travis Current">
+<meta property="og:description" content="Lake Travis community updates — new openings, closures, civic news and neighborly notes from Lakeway, Bee Cave, Spicewood &amp; Lago Vista, updated weekly.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pages.laketraviscurrent.com/community-updates/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0e0e0e;
+      --ink-soft: #2a2a2a;
+      --paper: #ffffff;
+      --cream: #faf7f2;
+      --rule: #e8e3da;
+      --muted: #6b6660;
+      --accent: #b8865c;
+      /* warm gold, lifted from site's signature */
+      --accent-soft: #f1e6d6;
+      --pink: #d99fa3;
+      /* signature pink from sign-off image */
+      --serif: "Playfair Display", "Iowan Old Style", Georgia, serif;
+      --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: var(--sans);
+      color: var(--ink);
+      background: #FCF9F5;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.55;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-underline-offset: 3px;
+    }
+    /* ---------- HERO ---------- */
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 32px 36px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.02;
+      margin: 12px 0 14px;
+      letter-spacing: -0.01em;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 400;
+    }
+    .hero p.lede {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(17px, 1.6vw, 21px);
+      color: var(--ink-soft);
+      max-width: none;
+      margin: 0;
+      line-height: 1.5;
+    }
+    /* ---------- FILTER BAR ---------- */
+    .filter-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px 8px;
+    }
+    .filter-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px 8px;
+      padding: 8px 0 24px;
+    }
+    .filter-label {
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-right: 8px;
+      font-weight: 600;
+    }
+    .chip {
+      appearance: none;
+      -webkit-appearance: none;
+      background: var(--paper);
+      color: var(--ink-soft);
+      border: 1px solid var(--rule);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: all 0.15s ease;
+    }
+    .chip:hover {
+      border-color: var(--ink-soft);
+      color: var(--ink);
+    }
+    .chip.is-active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+    .chip .count {
+      margin-left: 6px;
+      font-size: 11px;
+      opacity: 0.7;
+      font-variant-numeric: tabular-nums;
+    }
+    /* ---------- BULLETIN GRID ---------- */
+    .grid-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px 64px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 28px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 26px 26px 24px;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px -22px rgba(20, 16, 10, 0.25);
+      border-color: #d9d3c8;
+    }
+    .card .tag-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .tag {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 3px;
+      background: var(--accent-soft);
+      color: #7a4f24;
+      display: inline-block;
+    }
+    .tag.adopt {
+      background: #fbe4e6;
+      color: #a3454d;
+    }
+    .tag.civic {
+      background: #e3ebe2;
+      color: #3c6149;
+    }
+    .tag.opening {
+      background: var(--accent-soft);
+      color: #7a4f24;
+    }
+    .tag.coming {
+      background: #ece6dd;
+      color: #6e5a3c;
+    }
+    .tag.memoriam {
+      background: #e6e6ea;
+      color: #4a4a55;
+    }
+    .tag.notes {
+      background: #f0eae0;
+      color: #6a5b40;
+    }
+    .tag.cause {
+      background: #e9e3f1;
+      color: #54407a;
+    }
+    .issue-date {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+    .card h3 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 1.18;
+      margin: 0 0 10px;
+      color: var(--ink);
+      letter-spacing: -0.005em;
+    }
+    .card h3 em {
+      font-style: italic;
+      font-weight: 400;
+    }
+    .card p {
+      margin: 0 0 18px;
+      color: var(--ink-soft);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .card p a {
+      border-bottom: 1px solid var(--accent);
+    }
+    .card p a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .card .from-issue {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px dashed var(--rule);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .card .from-issue a {
+      font-style: italic;
+      color: var(--ink-soft);
+    }
+    .card .from-issue a:hover {
+      color: var(--accent);
+    }
+    /* ---------- EMPTY STATE ---------- */
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 18px;
+    }
+    /* ---------- SUBMIT CALLOUT ---------- */
+    .callout {
+      max-width: 1100px;
+      margin: 0 auto 64px;
+      padding: 48px 40px;
+      background: var(--cream);
+      border-radius: 6px;
+      text-align: center;
+      border: 1px solid var(--rule);
+    }
+    .callout .eyebrow {
+      color: var(--accent);
+    }
+    .callout h2 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(28px, 3.4vw, 40px);
+      margin: 10px 0 12px;
+      line-height: 1.15;
+    }
+    .callout h2 em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 400;
+    }
+    .callout p {
+      color: var(--ink-soft);
+      max-width: 580px;
+      margin: 0 auto 22px;
+      font-size: 16px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 13px 28px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: background 0.15s ease;
+    }
+    .btn-primary:hover {
+      background: var(--accent);
+      text-decoration: none;
+    }
+    /* hide cards via filter */
+    .card[data-hidden="true"] {
+      display: none;
+    }
+    @media (max-width: 700px) {
+      .hero {
+        padding: 16px 16px 20px;
+      }
+      .filter-wrap {
+        padding: 0 16px 8px;
+      }
+      .grid-wrap {
+        padding: 0 16px 48px;
+      }
+      .card {
+        padding: 16px 16px 14px;
+      }
+    }
+  </style>
+<style>
+  body { margin: 0; background: #FCF9F5; }
+  .ltc-topnav {
+    position: sticky; top: 0; z-index: 1000;
+    background: rgba(252, 249, 245, 0.97);
+    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    border-bottom: 1px solid #e4e1d9;
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  }
+  .ltc-topnav-in {
+    max-width: 1200px; margin: 0 auto; padding: 14px 28px;
+    display: flex; align-items: center; flex-wrap: wrap; gap: 10px 22px;
+  }
+  .ltc-topnav .ltc-wordmark {
+    font-weight: 700; font-size: 19px; letter-spacing: -0.01em;
+    color: #1c2326; text-decoration: none; white-space: nowrap; margin-right: auto; border: none;
+  }
+  .ltc-topnav .ltc-wordmark:hover { color: #526B72; }
+  .ltc-navlinks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 20px; }
+  .ltc-navlinks a {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    color: #3a4549; text-decoration: none; padding: 6px 0; border: none;
+  }
+  .ltc-navlinks a:hover { color: #526B72; }
+  .ltc-navlinks a.ltc-subbtn {
+    background: #526B72; color: #ffffff; padding: 9px 18px; border-radius: 999px;
+    font-size: 10.5px; letter-spacing: 0.18em; transition: background 0.2s ease;
+  }
+  .ltc-navlinks a.ltc-subbtn:hover { background: #3a4f55; color: #ffffff; }
+  @media (max-width: 700px) {
+    .ltc-topnav-in { padding: 12px 16px; gap: 8px 14px; }
+    .ltc-topnav .ltc-wordmark { font-size: 16px; }
+    .ltc-navlinks { gap: 4px 12px; }
+    .ltc-navlinks a { font-size: 10px; }
+    .ltc-navlinks a.ltc-subbtn { padding: 8px 14px; }
+  }
+  .ltc-sitefoot {
+    background: #1c2326; color: #cfd6d4; text-align: left;
+    font-family: Georgia, 'Times New Roman', serif;
+    padding: 56px 28px 28px; margin-top: 0;
+  }
+  .ltc-sitefoot .ltc-foot-in {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, minmax(160px, 1fr)); gap: 36px;
+  }
+  .ltc-sitefoot h4 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    color: #B8895A; margin: 0 0 14px;
+  }
+  .ltc-sitefoot ul { list-style: none; margin: 0; padding: 0; }
+  .ltc-sitefoot li { margin: 0 0 9px; }
+  .ltc-sitefoot a {
+    color: #cfd6d4; text-decoration: none; border: none;
+    font-size: 14.5px; line-height: 1.5;
+  }
+  .ltc-sitefoot a:hover { color: #ffffff; }
+  .ltc-foot-bottom {
+    max-width: 1200px; margin: 44px auto 0; padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 12.5px; color: #8d989b;
+  }
+  @media (max-width: 700px) {
+    .ltc-sitefoot { padding: 44px 20px 24px; }
+    .ltc-sitefoot .ltc-foot-in { grid-template-columns: 1fr 1fr; gap: 28px; }
+  }
+</style>
+</head>
+<body>
+<nav class="ltc-topnav" aria-label="Lake Travis Current">
+  <div class="ltc-topnav-in">
+    <a class="ltc-wordmark" href="https://www.laketraviscurrent.com/">Lake Travis Current</a>
+    <div class="ltc-navlinks">
+      <a href="/events/">Events</a>
+      <a href="/live-music/">Live Music</a>
+      <a href="/restaurants/">Restaurants</a>
+      <a href="/happy-hours/">Happy Hours</a>
+      <a href="/features/">Guides</a>
+      <a class="ltc-subbtn" href="https://www.laketraviscurrent.com/subscribe">Subscribe</a>
+    </div>
+  </div>
+</nav>
+<main>
+<header class="hero">
+    <h1>Lake Travis <em>Community Updates</em></h1>
+    <p class="lede">
+      The kind of news a neighbor would text you about — new openings, adoptable pups, and the quiet shifts shaping the lake. Pulled
+      each week from <i>The Current.</i>
+    </p>
+  </header>
+
+  <!-- ============== FILTERS ============== -->
+  <section class="filter-wrap" aria-label="Filter community updates">
+    <div class="filter-row" id="filterRow">
+      <span class="filter-label">Show</span>
+      <button class="chip is-active" data-filter="all">Everything</button>
+      <button class="chip" data-filter="opening">Grand Opening</button>
+      <button class="chip" data-filter="coming">Coming Soon</button>
+      <button class="chip" data-filter="adopt">Adopt Me</button>
+      <button class="chip" data-filter="civic">Civic</button>
+      <button class="chip" data-filter="cause">Good Cause</button>
+      <button class="chip" data-filter="notes">News &amp; Notes</button>
+    </div>
+  </section>
+
+  <!-- ============== GRID ============== -->
+  <section class="grid-wrap">
+    <div class="grid" id="grid">
+
+      <!-- ===== ITEM ===== -->
+    <article class="card" data-category="notes">
+      <div class="tag-row">
+        <span class="tag notes">Found Safe</span>
+        <span class="issue-date">July 2, 2026</span>
+      </div>
+      <h3>The search is <em>over</em></h3>
+      <p>
+        <a href="https://www.kxan.com/news/local/hill-country/gracie-the-giraffe-has-been-found/" target="_blank" rel="noopener">Gracie the giraffe</a>, whose disappearance had plenty of Central Texans doing a double take, has been found safe. We were all a little more invested than we'd like to admit.
+      </p>
+      <div class="from-issue">
+        From <a href="https://www.laketraviscurrent.com/p/lake-travis-july-4th-events-2026">Your Lake Travis July 4th Guide</a>
+      </div>
+    </article>
+
+      <!-- ===== ITEM ===== -->
+    <article class="card" data-category="civic">
+      <div class="tag-row">
+        <span class="tag civic">Breaking Ground</span>
+        <span class="issue-date">July 2, 2026</span>
+      </div>
+      <h3>Another step for <em>The Village</em></h3>
+      <p>
+        Bee Cave approved early plans for a five-story <a href="https://cityofbeecavetexas.community.diligentoneplatform.com/document/66d3120c-cd5f-4094-85dd-9b462d883617/" target="_blank" rel="noopener">apartment building</a> at the Village at Spanish Oaks, complete with a dog park, fitness center, plunge pool, and swim-up bar. The 81-acre mixed-use development continues to take shape.
+      </p>
+      <div class="from-issue">
+        From <a href="https://www.laketraviscurrent.com/p/lake-travis-july-4th-events-2026">Your Lake Travis July 4th Guide</a>
+      </div>
+    </article>
+
+      <!-- ===== ITEM ===== -->
+    <article class="card" data-category="notes">
+      <div class="tag-row">
+        <span class="tag notes">Quoted</span>
+        <span class="issue-date">July 2, 2026</span>
+      </div>
+      <h3>Quoted, on <em>Spicewood</em></h3>
+      <p>
+        “You target things to do right in my stomping grounds of the Spicewood area. It’s great to be informed and support the local businesses.” — a reader comment from last week’s newsletter.
+      </p>
+      <div class="from-issue">
+        From <a href="https://www.laketraviscurrent.com/p/lake-travis-july-4th-events-2026">Your Lake Travis July 4th Guide</a>
+      </div>
+    </article>
+
+      <!-- ===== ITEM ===== -->
+    <article class="card" data-category="adopt">
+      <div class="tag-row">
+        <span class="tag adopt">Adopt Me</span>
+        <span class="issue-date">July 2, 2026</span>
+      </div>
+      <h3>Meet <em>Goose</em></h3>
+      <p>
+        Meet <a href="https://www.addicuslegacy.org/dog/goose/" target="_blank" rel="noopener">Goose</a>, a lovable pup with plenty of personality who’s ready to trade shelter life for a backyard, a couch, and someone to throw the ball one more time.
+      </p>
+      <div class="from-issue">
+        From <a href="https://www.laketraviscurrent.com/p/lake-travis-july-4th-events-2026">Your Lake Travis July 4th Guide</a>
+      </div>
+    </article>
+
+      <!-- ===== ITEM ===== -->
+    <article class="card" data-category="coming">
+      <div class="tag-row">
+        <span class="tag coming">Texas Red Rocks</span>
+        <span class="issue-date">June 25, 2026</span>
+      </div>
+      <h3>A Red Rocks, <em>Texas-style</em></h3>
+      <p>
+        A new outdoor concert venue called <a href="https://www.instagram.com/p/DZ09yDhlmee/" target="_blank" rel="noopener">White Rocks Amphitheater</a> is taking shape off Highway 71, built into the natural limestone cliffs of the Hill Country — already drawing comparisons to Colorado's famous Red Rocks.
+      </p>
+      <div class="from-issue">
+        From <a href="https://www.laketraviscurrent.com/p/lakeway-events-june-2026">White Rocks in Texas</a>
+      </div>
+    </article>
+
+  <!-- ===== ITEM ===== -->
+    <article class="card" data-category="notes">
+      <div class="tag-row">
+        <span class="tag notes">Ranch Comedy</span>
+        <span class="issue-date">June 25, 2026</span>
+      </div>
+      <h3>McConaughey and Harrelson, <em>roommates</em></h3>
+      <p>
+        Two Texas icons are teaming up for Apple TV+'s new comedy <a href="https://www.apple.com/tv-pr/news/2026/06/apple-tvs-new-comedy-series-brothers-starring-matthew-mcconaughey-and-woody-harrelson-to-make-global-debut-on-wednesday-september-23/" target="_blank" rel="noopener">Brothers</a>, premiering in September. The series follows fictionalized versions of Matthew McConaughey and Woody Harrelson living together on a Texas ranch.
+      </p>
+      <div class="from-issue">
+        From <a href="https://www.laketraviscurrent.com/p/lakeway-events-june-2026">White Rocks in Texas</a>
+      </div>
+    </article>
+
+  <!-- ===== ITEM ===== -->
+    <article class="card" data-category="notes">
+      <div class="tag-row">
+        <span class="tag notes">Gold Stars</span>
+        <span class="issue-date">June 25, 2026</span>
+      </div>
+      <h3>LTISD <em>tops the state</em></h3>
+      <p>
+        LTISD once again outperformed state averages on <a href="https://txresearchportal.com/" target="_blank" rel="noopener">STAAR exams</a>, with students posting strong results across multiple grade levels and subjects.
+      </p>
+      <div class="from-issue">
+        From <a href="https://www.laketraviscurrent.com/p/lakeway-events-june-2026">White Rocks in Texas</a>
+      </div>
+    </article>
+
+  <!-- ===== ITEM ===== -->
+    <article class="card" data-category="adopt">
+      <div class="tag-row">
+        <span class="tag adopt">Adopt Me</span>
+        <span class="issue-date">June 25, 2026</span>
+      </div>
+      <h3>Meet <em>Solana</em></h3>
+      <p>
+        <a href="https://www.addicuslegacy.org/dog/solana/" target="_blank" rel="noopener">Solana</a> is a sweet rescue pup looking for her forever home. Like all good dogs, she's asking for very little: a place to belong and someone to love.
+      </p>
+      <div class="from-issue">
+        From <a href="https://www.laketraviscurrent.com/p/lakeway-events-june-2026">White Rocks in Texas</a>
+      </div>
+    </article>
+
+  <!-- ===== ITEM ===== -->
+      <article class="card" data-category="notes">
+        <div class="tag-row">
+          <span class="tag notes">Last Call</span>
+          <span class="issue-date">June 18, 2026</span>
+        </div>
+        <h3>An unexpected <em>last call</em></h3>
+        <p>
+          <a href="https://nextdoor.com/p/w4cFTKGtxFtn" target="_blank" rel="noopener">Verde's Mexican Parilla</a>
+          off Hamilton Pool Road appears to have permanently closed, catching
+          many regulars off guard. One day it was open; the next, it wasn't.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/lake-travis-fathers-day-events-2026">Alright, Alright, Alright</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="notes">
+        <div class="tag-row">
+          <span class="tag notes">Quoted</span>
+          <span class="issue-date">June 18, 2026</span>
+        </div>
+        <h3>Quoted, on <em>Spicewood</em></h3>
+        <p>
+          “Spicewood is great! Lots of different experiences, wide range of
+          personalities, we all agree that it’s a great place to live, and all of
+          us value our freedom!” — a reader on what they love most about their
+          neighborhood.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/lake-travis-fathers-day-events-2026">Alright, Alright, Alright</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="adopt">
+        <div class="tag-row">
+          <span class="tag adopt">Adopt Me</span>
+          <span class="issue-date">June 18, 2026</span>
+        </div>
+        <h3>Meet <em>Harper Lee</em></h3>
+        <p>
+          Meet <a href="https://www.addicuslegacy.org/dog/harperlee/" target="_blank" rel="noopener">Harper Lee</a>,
+          a thoughtful retriever mix who’d rather earn your trust than demand
+          your attention. A trail walk, a calm home, and a confident dog friend
+          are pretty much her idea of a perfect day.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/lake-travis-fathers-day-events-2026">Alright, Alright, Alright</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="opening">
+        <div class="tag-row">
+          <span class="tag opening">Recovery Mode</span>
+          <span class="issue-date">June 11, 2026</span>
+        </div>
+        <h3>Recovery, <em>upgraded</em></h3>
+        <p>
+          <a href="https://dynamicsportsmedicine.com/office-locations/bee-cave/" target="_blank" rel="noopener">Dynamic Sports Medicine</a>
+          is now open in Bee Cave, offering sports rehab, chiropractic care, dry
+          needling, cupping, shockwave, and red light therapy. In other words,
+          help for whatever happened during pickleball, golf, or simply
+          sleeping wrong.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/carlos-n-charlie-s">Carlos n' Charlie's</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="adopt">
+        <div class="tag-row">
+          <span class="tag adopt">Adopt Me</span>
+          <span class="issue-date">June 11, 2026</span>
+        </div>
+        <h3>Meet <em>Pongo</em></h3>
+        <p>
+          We featured
+          <a href="https://www.addicuslegacy.org/dog/pongo/" target="_blank" rel="noopener">Pongo</a>
+          months ago, and honestly, we were surprised to see he's still looking
+          for a home. After being shot and losing a leg, he somehow never lost
+          his joy — and we're hoping the right person is reading this.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/carlos-n-charlie-s">Carlos n' Charlie's</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="notes">
+        <div class="tag-row">
+          <span class="tag notes">Splash Status</span>
+          <span class="issue-date">June 4, 2026</span>
+        </div>
+        <h3>The splash pad <em>is back</em></h3>
+        <p>
+          The
+          <a href="https://www.instagram.com/p/DZJGX-OOEGD/" target="_blank" rel="noopener">splash pad</a>
+          at Hill Country Galleria is officially back after years of sitting dry.
+          It's now open daily from 10am to 6pm, giving parents one more weapon
+          in the ongoing battle against summer boredom.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/margaritas-marshall">Margaritas &amp; Marshall</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="opening">
+        <div class="tag-row">
+          <span class="tag opening">Breakfast Outpost</span>
+          <span class="issue-date">June 4, 2026</span>
+        </div>
+        <h3>Don't snooze <em>on this</em></h3>
+        <p>
+          Not exactly Lake Travis, but close enough to matter:
+          <a href="https://www.snoozeeatery.com/restaurant/texas/arbor-trails" target="_blank" rel="noopener">Snooze
+            A.M. Eatery</a>
+          has opened in Arbor Trails, bringing another outpost of its famously
+          indulgent breakfast menu to Southwest Austin.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/margaritas-marshall">Margaritas &amp; Marshall</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="adopt">
+        <div class="tag-row">
+          <span class="tag adopt">Adopt Me</span>
+          <span class="issue-date">June 4, 2026</span>
+        </div>
+        <h3>Meet <em>Embers</em></h3>
+        <p>
+          <a href="https://www.addicuslegacy.org/dog/embers/" target="_blank" rel="noopener">Embers</a>
+          is a 20-pound Chihuahua mix with expressive eyes, good manners, and a
+          soft spot for other animals. Give her a little time, and her personality
+          does the rest.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/margaritas-marshall">Margaritas &amp; Marshall</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="opening">
+        <div class="tag-row">
+          <span class="tag opening">Core Values</span>
+          <span class="issue-date">May 28, 2026</span>
+        </div>
+        <h3>Movement, <em>reconsidered</em></h3>
+        <p>
+          <a href="https://www.instagram.com/noa.pilates.and.wellness/" target="_blank" rel="noopener">Noa Pilates and
+            Wellness</a>
+          has opened in Lakeway, pairing Pilates with one-on-one physical therapy
+          and a focus on core, mobility, and posture — three words your spine has
+          been quietly waiting to hear.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/bye-maycember">Bye, Maycember</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="notes">
+        <div class="tag-row">
+          <span class="tag notes">Hospital Detour</span>
+          <span class="issue-date">May 28, 2026</span>
+        </div>
+        <h3>Expecting families, <em>rerouted</em></h3>
+        <p>
+          Baylor Scott &amp; White Medical Center – Lakeway will soon
+          <a href="https://www.statesman.com/news/healthcare/article/lakeway-maternity-unit-hospital-closing-22266737.php"
+            target="_blank" rel="noopener">close its maternity unit</a>,
+          leaving local families with one fewer option close to home for labor
+          and delivery. The hospital cited declining birth volumes and ongoing
+          staffing challenges; the practical effect is a longer drive on what is
+          rarely a patient morning.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/bye-maycember">Bye, Maycember</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="adopt">
+        <div class="tag-row">
+          <span class="tag adopt">Adopt Me</span>
+          <span class="issue-date">May 28, 2026</span>
+        </div>
+        <h3>Meet <em>Miley Rose</em></h3>
+        <p>
+          <a href="https://www.addicuslegacy.org/dog/miley-rose/" target="_blank" rel="noopener">Miley Rose</a>
+          is a Beagle/Husky mix with the energy of a tiny wrecking ball and the
+          disposition of a full-time cuddle buddy. She loves other dogs, has
+          already mastered the dog door, and approaches life the same way she
+          approaches people: full speed ahead.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/bye-maycember">Bye, Maycember</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="coming">
+        <div class="tag-row">
+          <span class="tag coming">Suite Life</span>
+          <span class="issue-date">May 21, 2026</span>
+        </div>
+        <h3>Independent <em>beauty</em></h3>
+        <p>
+          <a href="https://www.instagram.com/rooted.salon.suites/" target="_blank" rel="noopener">Rooted Salon
+            Suites</a>
+          is opening this September in Lakeway with private suites for stylists
+          and wellness pros — basically coworking, but everyone has better lighting.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/your-lake-travis-restaurant-directory">Your Lake Travis
+            Restaurant Directory</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="notes">
+        <div class="tag-row">
+          <span class="tag notes">Peach Drama</span>
+          <span class="issue-date">May 21, 2026</span>
+        </div>
+        <h3>Peach season, <em>complicated</em></h3>
+        <p>
+          A warm winter followed by a late freeze has Hill Country peach growers
+          bracing for one of the
+          <a href="https://spectrumlocalnews.com/tx/south-texas-el-paso/news/2026/05/14/late-freeze-affects-peach-growers-in-texas-hill-country"
+            target="_blank" rel="noopener">roughest seasons</a>
+          in years — fewer peaches, higher prices, and probably a few emotional
+          roadside-stand conversations this summer.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/your-lake-travis-restaurant-directory">Your Lake Travis
+            Restaurant Directory</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="notes">
+        <div class="tag-row">
+          <span class="tag notes">October Plans</span>
+          <span class="issue-date">May 14, 2026</span>
+        </div>
+        <h3>ACL drops <em>its 2026 lineup</em></h3>
+        <p>
+          <a href="https://www.aclfestival.com/" target="_blank" rel="noopener">Austin City Limits Music Festival</a>
+          released its day-by-day 2026 lineup breakdown, giving everyone exactly
+          what they needed: a reason to spend the next week debating which
+          single-day ticket is the move.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/eyes-on-the-lake">Eyes on the Lake</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="notes">
+        <div class="tag-row">
+          <span class="tag notes">News &amp; Notes</span>
+          <span class="issue-date">May 14, 2026</span>
+        </div>
+        <h3>Your next <em>guilty pleasure</em></h3>
+        <p>
+          Bravo is heading to the Texas Hill Country with a new reality series,
+          <a href="https://www.bravotv.com/the-daily-dish/secrets-lies-texas-wives-greenlit-at-bravo-new-series-details"
+            target="_blank" rel="noopener"><i>Secrets, Lies, and Texas Wives</i></a>,
+          following wealthy Boerne women balancing ranches, families, social
+          calendars, and apparently quite a bit of drama behind polished front doors.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/eyes-on-the-lake">Eyes on the Lake</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="opening">
+        <div class="tag-row">
+          <span class="tag opening">Grand Opening</span>
+          <span class="issue-date">Apr 30, 2026</span>
+        </div>
+        <h3>Tequila, <em>now local</em></h3>
+        <p>
+          <a href="https://www.bellalomatexas.com/" target="_blank" rel="noopener">Bella Loma</a>,
+          a new family-owned agave distillery, just opened its tasting room in
+          Spicewood — house-distilled blanco and reposado, margaritas and Mexican
+          martinis, with añejo, mezcal, and whiskey on the way. Dogs welcome, BYO
+          snacks, and one more good reason to wander west.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/derby-cinco">Derby &amp; Cinco</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="opening">
+        <div class="tag-row">
+          <span class="tag opening">Grand Opening</span>
+          <span class="issue-date">Apr 30, 2026</span>
+        </div>
+        <h3>Your newest reason <em>to redecorate</em></h3>
+        <p>
+          Bee Cave’s newest interior design shop,
+          <a href="https://www.facebook.com/events/1332424398803357/" target="_blank" rel="noopener">Sicara Design</a>,
+          opens with a launch party Friday evening, May 1. Drinks, bites, and an
+          early peek at unique designs before the rest of the Galleria catches on.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/derby-cinco">Derby &amp; Cinco</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="coming">
+        <div class="tag-row">
+          <span class="tag coming">Coming Soon</span>
+          <span class="issue-date">Apr 23, 2026</span>
+        </div>
+        <h3>Lake days, <em>upgraded</em></h3>
+        <p>
+          <a href="https://www.facebook.com/austinsurflodgetx" target="_blank" rel="noopener">Austin Surf Lodge</a>
+          will soon be giving you a well-designed excuse to trade screen time for
+          lake time. Opening this summer on Lake Travis, with wakesurf and pontoon
+          charters alongside cabins for couples to full groups.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/three-festivals-one-weekend">Three Festivals, One
+            Weekend</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="coming">
+        <div class="tag-row">
+          <span class="tag coming">Coming Soon</span>
+          <span class="issue-date">Apr 23, 2026</span>
+        </div>
+        <h3>Wellness, <em>with a star</em></h3>
+        <p>
+          Canyon Ranch in Spicewood is bringing in chef Val Cantu of Michelin-starred
+          <i>Californios</i> to lead its new concept,
+          <a href="https://sanantonio.culturemap.com/news/restaurants-bars/canyon-ranch-estella-val-cantu/"
+            target="_blank" rel="noopener">Estella</a>
+          — proof that “healthy” no longer has to mean underwhelming.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/three-festivals-one-weekend">Three Festivals, One
+            Weekend</a>
+        </div>
+      </article>
+
+      <!-- ===== ITEM ===== -->
+      <article class="card" data-category="civic">
+        <div class="tag-row">
+          <span class="tag civic">Your Civic Era</span>
+          <span class="issue-date">Apr 23, 2026</span>
+        </div>
+        <h3>Mayor’s <em>round table</em></h3>
+        <p>
+          Bee Cave City Hall hosted a community business round table this spring —
+          a short, useful, no-frills chat about what’s growing, what’s slowing, and
+          what locals are noticing along 71. The kind of meeting that quietly shapes
+          the next year of Bee Cave.
+        </p>
+        <div class="from-issue">
+          From <a href="https://www.laketraviscurrent.com/p/three-festivals-one-weekend">Three Festivals, One
+            Weekend</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============== CALLOUT ============== -->
+  <section class="callout">
+    <div class="eyebrow">Got Something to Share?</div>
+    <h2>Tell us what’s <em>happening</em> around the lake.</h2>
+    <p>
+      A new opening, a closing worth marking, a neighbor doing something quietly
+      great — if it belongs in the bulletin, send it our way. Real tips from real
+      locals are what make this section work.
+    </p>
+    <a class="btn-primary" href="mailto:hello@laketraviscurrent.com?subject=Community%20Bulletin%20Tip">Submit a Tip</a>
+  </section>
+
+  <script>
+    (function () {
+    const grid = document.getElementById('grid');
+    const cards = Array.from(grid.querySelectorAll('.card'));
+    const chips = Array.from(document.querySelectorAll('.chip'));
+
+    // Add counts to chips
+    chips.forEach(chip => {
+      const f = chip.dataset.filter;
+      const count = (f === 'all')
+        ? cards.length
+        : cards.filter(c => c.dataset.category === f).length;
+      const span = document.createElement('span');
+      span.className = 'count';
+      span.textContent = count;
+      chip.appendChild(span);
+    });
+
+    function applyFilter(filter) {
+      let visible = 0;
+      cards.forEach(card => {
+        const match = (filter === 'all') || card.dataset.category === filter;
+        card.dataset.hidden = match ? 'false' : 'true';
+        if (match) visible++;
+      });
+
+      // Empty state
+      const existingEmpty = grid.querySelector('.empty');
+      if (existingEmpty) existingEmpty.remove();
+      if (visible === 0) {
+        const empty = document.createElement('div');
+        empty.className = 'empty';
+        empty.textContent = 'Nothing here yet — check back next issue.';
+        grid.appendChild(empty);
+      }
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('is-active'));
+        chip.classList.add('is-active');
+        applyFilter(chip.dataset.filter);
+      });
+    });
+  })();
+  </script>
+</main>
+<footer class="ltc-sitefoot">
+  <div class="ltc-foot-in">
+    <div>
+      <h4>Read</h4>
+      <ul>
+        <li><a href="https://www.laketraviscurrent.com/">Latest Issue</a></li>
+        <li><a href="https://www.laketraviscurrent.com/archive">Archive</a></li>
+        <li><a href="https://www.laketraviscurrent.com/subscribe">Subscribe</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Discover</h4>
+      <ul>
+        <li><a href="/events/">Local Events</a></li>
+        <li><a href="/live-music/">Live Music</a></li>
+        <li><a href="/happy-hours/">Happy Hours</a></li>
+        <li><a href="/restaurants/">Restaurants</a></li>
+        <li><a href="/farmers-markets/">Farmers Markets</a></li>
+        <li><a href="/community-updates/">Community Updates</a></li>
+        <li><a href="/features/">Features &amp; Guides</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>About</h4>
+      <ul>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/advertise/">Advertise</a></li>
+        <li><a href="/submit-event/">Submit an Event</a></li>
+        <li><a href="/meet-your-neighbor/">Meet Your Neighbor</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ltc-foot-bottom">&copy; 2026 Lake Travis Current.</div>
+</footer>
+</body>
+</html>

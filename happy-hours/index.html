@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Best Happy Hours | Lake Travis Current</title>
+<meta name="description" content="A curated guide to the best happy hours around Lake Travis — by neighborhood. From Lakeway to Lago Vista, the patios, the deals, and the spots locals actually go.">
+<link rel="canonical" href="https://pages.laketraviscurrent.com/happy-hours/">
+<meta property="og:title" content="Best Happy Hours | Lake Travis Current">
+<meta property="og:description" content="A curated guide to the best happy hours around Lake Travis — by neighborhood. From Lakeway to Lago Vista, the patios, the deals, and the spots locals actually go.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pages.laketraviscurrent.com/happy-hours/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --soft-ink: #3d3d3d;
+    --muted: #6b6b6b;
+    --paper: #faf7f2;
+    --cream: #f3ede2;
+    --warm: #e8dfd0;
+    --accent: #2d4a3e;     /* deep cedar green — hill country */
+    --accent-2: #c45a3b;   /* sunset clay */
+    --gold: #b48a3f;
+    --line: #e0d8c8;
+    --shadow: 0 1px 2px rgba(20,20,20,.04), 0 8px 24px rgba(20,20,20,.06);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  /* ---------- NAV ---------- */
+  .nav {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 50;
+  }
+  .nav-inner {
+    max-width: 1180px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 28px;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 900;
+    letter-spacing: -.01em;
+    font-size: 22px;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links {
+    display: flex; gap: 28px; align-items: center;
+    font-size: 13px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600;
+  }
+  .nav-links a { text-decoration: none; color: var(--soft-ink); }
+  .nav-links a:hover { color: var(--accent-2); }
+  .nav-cta {
+    background: var(--ink); color: #fff;
+    padding: 9px 18px; border-radius: 999px;
+    font-size: 12px; letter-spacing: .14em;
+    text-decoration: none; font-weight: 600;
+  }
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    color: var(--ink);
+    background: var(--paper);
+  }
+  .hero-inner {
+    position: relative;
+    max-width: 760px;
+    padding: 80px 28px 56px;
+  }
+  .kicker {
+    font-size: 12px; letter-spacing: .32em; text-transform: uppercase;
+    margin-bottom: 18px; color: var(--accent-2); font-weight: 700;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.02;
+    margin: 0 0 18px;
+    letter-spacing: -.01em;
+  }
+  .hero p {
+    font-size: 18px; max-width: 580px; margin: 0 auto;
+    color: var(--soft-ink);
+  }
+  .water-bar {
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 13px; color: var(--soft-ink);
+    letter-spacing: .02em;
+  }
+  .water-bar strong { color: var(--accent); font-weight: 700; }
+  /* ---------- INTRO ---------- */
+  .intro {
+    max-width: 760px; margin: 0 auto; padding: 64px 28px 24px;
+    text-align: center;
+  }
+  .intro .lead-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 800;
+    font-size: 28px;
+    margin: 0 0 8px;
+  }
+  .intro p { color: var(--soft-ink); font-size: 17px; }
+  .intro .divider {
+    margin: 36px auto 0;
+    width: 96px; display: flex; justify-content: space-between;
+    font-size: 9px; letter-spacing: 1px;
+  }
+  .intro .divider span { opacity: .8; }
+  /* ---------- AREA NAV (anchor pills) ---------- */
+  .area-nav {
+    max-width: 1180px; margin: 0 auto;
+    padding: 0 28px 8px;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+  }
+  .area-nav a {
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all .15s ease;
+  }
+  .area-nav a:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  /* ---------- AREA SECTION ---------- */
+  .area {
+    max-width: 1180px; margin: 0 auto;
+    padding: 56px 28px 24px;
+  }
+  .area-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 16px; margin-bottom: 28px;
+  }
+  .area-title-wrap { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .area-number {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 800;
+    color: var(--accent-2);
+    font-size: 22px;
+    letter-spacing: .02em;
+  }
+  .area h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -.01em;
+    text-transform: uppercase;
+  }
+  .area .area-blurb {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 460px;
+    text-align: right;
+  }
+  /* ---------- CARDS ---------- */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 22px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 24px 22px 22px;
+    box-shadow: var(--shadow);
+    display: flex; flex-direction: column;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 1px 2px rgba(20,20,20,.04), 0 14px 32px rgba(20,20,20,.10);
+  }
+  .card-eyebrow {
+    font-size: 11px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 6px;
+    letter-spacing: -.005em;
+  }
+  .card .when {
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .card .when .pipe { color: var(--line); margin: 0 6px; }
+  .card .deal {
+    font-size: 15px;
+    color: var(--soft-ink);
+    margin: 0 0 14px;
+    line-height: 1.5;
+  }
+  .card .deal strong { color: var(--ink); }
+  .card .blurb {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 14.5px;
+    margin: 0 0 18px;
+    line-height: 1.5;
+    border-left: 2px solid var(--gold);
+    padding-left: 12px;
+  }
+  .card-foot {
+    margin-top: auto;
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 14px;
+    border-top: 1px dashed var(--line);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .card-foot .place { display: flex; align-items: center; gap: 6px; }
+  .card-foot .pin {
+    width: 12px; height: 12px;
+    display: inline-block;
+    background: var(--accent);
+    clip-path: polygon(50% 0, 100% 38%, 80% 100%, 20% 100%, 0 38%);
+  }
+  .card-foot a {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: .04em;
+  }
+  .card-foot a:hover { color: var(--accent-2); }
+  /* ---------- CTA STRIP ---------- */
+  .cta-strip {
+    background: var(--cream);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-top: 48px;
+    padding: 56px 28px;
+    text-align: center;
+  }
+  .cta-strip h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    margin: 0 0 12px;
+  }
+  .cta-strip p { max-width: 540px; margin: 0 auto 22px; color: var(--soft-ink); }
+  .cta-btn {
+    display: inline-block;
+    background: var(--ink); color: #fff;
+    padding: 14px 30px; border-radius: 999px;
+    text-decoration: none; font-weight: 600;
+    letter-spacing: .12em; font-size: 13px;
+    text-transform: uppercase;
+  }
+  .cta-btn:hover { background: var(--accent); }
+  /* ---------- FINE PRINT ---------- */
+  .fine-print {
+    max-width: 760px; margin: 0 auto;
+    padding: 36px 28px 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13.5px;
+    font-style: italic;
+  }
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--ink); color: #d8d2c4;
+    padding: 48px 28px 24px;
+    text-align: center;
+  }
+  footer .foot-inner { max-width: 760px; margin: 0 auto; }
+  footer h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #fff; font-size: 24px; margin: 0 0 8px;
+  }
+  footer .foot-links {
+    margin: 24px 0 16px;
+    display: flex; justify-content: center; gap: 22px; flex-wrap: wrap;
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+  }
+  footer .foot-links a { color: #d8d2c4; text-decoration: none; }
+  footer .foot-links a:hover { color: #fff; }
+  footer .copy { font-size: 12px; opacity: .65; margin-top: 18px; }
+  @media (max-width: 640px) {
+    .nav-inner { padding: 12px 18px; }
+    .nav-links { gap: 18px; }
+    .nav-links a:not(.nav-cta) { display: none; }
+    .hero-inner { padding: 60px 22px; }
+    .area { padding: 44px 18px 16px; }
+    .area .area-blurb { text-align: left; }
+    .cards { grid-template-columns: 1fr; }
+  }
+</style>
+<style>
+  body { margin: 0; background: #FCF9F5; }
+  .ltc-topnav {
+    position: sticky; top: 0; z-index: 1000;
+    background: rgba(252, 249, 245, 0.97);
+    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    border-bottom: 1px solid #e4e1d9;
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  }
+  .ltc-topnav-in {
+    max-width: 1200px; margin: 0 auto; padding: 14px 28px;
+    display: flex; align-items: center; flex-wrap: wrap; gap: 10px 22px;
+  }
+  .ltc-topnav .ltc-wordmark {
+    font-weight: 700; font-size: 19px; letter-spacing: -0.01em;
+    color: #1c2326; text-decoration: none; white-space: nowrap; margin-right: auto; border: none;
+  }
+  .ltc-topnav .ltc-wordmark:hover { color: #526B72; }
+  .ltc-navlinks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 20px; }
+  .ltc-navlinks a {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    color: #3a4549; text-decoration: none; padding: 6px 0; border: none;
+  }
+  .ltc-navlinks a:hover { color: #526B72; }
+  .ltc-navlinks a.ltc-subbtn {
+    background: #526B72; color: #ffffff; padding: 9px 18px; border-radius: 999px;
+    font-size: 10.5px; letter-spacing: 0.18em; transition: background 0.2s ease;
+  }
+  .ltc-navlinks a.ltc-subbtn:hover { background: #3a4f55; color: #ffffff; }
+  @media (max-width: 700px) {
+    .ltc-topnav-in { padding: 12px 16px; gap: 8px 14px; }
+    .ltc-topnav .ltc-wordmark { font-size: 16px; }
+    .ltc-navlinks { gap: 4px 12px; }
+    .ltc-navlinks a { font-size: 10px; }
+    .ltc-navlinks a.ltc-subbtn { padding: 8px 14px; }
+  }
+  .ltc-sitefoot {
+    background: #1c2326; color: #cfd6d4; text-align: left;
+    font-family: Georgia, 'Times New Roman', serif;
+    padding: 56px 28px 28px; margin-top: 0;
+  }
+  .ltc-sitefoot .ltc-foot-in {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, minmax(160px, 1fr)); gap: 36px;
+  }
+  .ltc-sitefoot h4 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    color: #B8895A; margin: 0 0 14px;
+  }
+  .ltc-sitefoot ul { list-style: none; margin: 0; padding: 0; }
+  .ltc-sitefoot li { margin: 0 0 9px; }
+  .ltc-sitefoot a {
+    color: #cfd6d4; text-decoration: none; border: none;
+    font-size: 14.5px; line-height: 1.5;
+  }
+  .ltc-sitefoot a:hover { color: #ffffff; }
+  .ltc-foot-bottom {
+    max-width: 1200px; margin: 44px auto 0; padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 12.5px; color: #8d989b;
+  }
+  @media (max-width: 700px) {
+    .ltc-sitefoot { padding: 44px 20px 24px; }
+    .ltc-sitefoot .ltc-foot-in { grid-template-columns: 1fr 1fr; gap: 28px; }
+  }
+</style>
+</head>
+<body>
+<nav class="ltc-topnav" aria-label="Lake Travis Current">
+  <div class="ltc-topnav-in">
+    <a class="ltc-wordmark" href="https://www.laketraviscurrent.com/">Lake Travis Current</a>
+    <div class="ltc-navlinks">
+      <a href="/events/">Events</a>
+      <a href="/live-music/">Live Music</a>
+      <a href="/restaurants/">Restaurants</a>
+      <a href="/happy-hours/">Happy Hours</a>
+      <a href="/features/">Guides</a>
+      <a class="ltc-subbtn" href="https://www.laketraviscurrent.com/subscribe">Subscribe</a>
+    </div>
+  </div>
+</nav>
+<main>
+<header class="hero">
+    <div class="hero-inner">
+      <div class="kicker">A Lake Travis Current Guide</div>
+      <h1>The Best Happy Hours Around the Lake</h1>
+      <p>The patios. The deals. The spots locals actually go. Six neighborhoods, one well-poured guide.</p>
+    </div>
+  </header>
+
+  <!-- EXPANDING GALLERY -->
+  <style>
+    .expanding-gallery-container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .gallery-wrapper {
+      display: flex;
+      gap: 12px;
+      height: 450px;
+      overflow: hidden;
+    }
+
+    .gallery-column {
+      flex: 1;
+      height: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      transition: flex 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .gallery-column .gallery-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      text-decoration: none;
+      overflow: hidden;
+    }
+
+    .gallery-column img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      border-radius: 24px;
+      transition: transform 0.8s ease, filter 0.8s ease;
+    }
+
+    .gallery-column:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.12) 40%, transparent 100%);
+      padding: 30px 20px;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
+    }
+
+    .gallery-overlay h3 {
+      margin: 0 0 8px 0;
+      font-family: 'Courier New', system-ui, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .gallery-overlay p {
+      margin: 0;
+      font-family: 'Courier New', system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #ffffff;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .gallery-wrapper:hover .gallery-column {
+      flex: 0.5;
+    }
+
+    .gallery-wrapper .gallery-column:hover {
+      flex: 3;
+    }
+
+    .gallery-column:hover .gallery-overlay {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Click to lock expansion on desktop */
+    .gallery-column.expanded {
+      flex: 3 !important;
+    }
+
+    .gallery-wrapper.has-expanded .gallery-column:not(.expanded):not(:hover) {
+      flex: 0.5;
+    }
+
+    .gallery-column.expanded .gallery-overlay {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Responsive design - tap to expand on mobile */
+    @media (max-width: 768px) {
+      .gallery-wrapper {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .gallery-wrapper:hover .gallery-column {
+        flex: none;
+      }
+
+      .gallery-wrapper .gallery-column:hover {
+        flex: none;
+      }
+
+      .gallery-column {
+        height: 120px;
+        flex: none !important;
+        transition: height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .gallery-column.expanded {
+        height: 350px;
+      }
+
+      .gallery-column .gallery-overlay {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+
+      .gallery-column.expanded .gallery-overlay {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .gallery-overlay h3 {
+        font-size: 18px;
+      }
+
+      .gallery-overlay p {
+        font-size: 13px;
+      }
+    }
+  </style>
+
+  <div class="expanding-gallery-container">
+    <div class="gallery-wrapper" id="gallery-wrapper-eg-nas8pxii6">
+
+      <div class="gallery-column">
+        <a href="https://static1.squarespace.com/static/5d7bd1eb2135dd7f46a7ffab/t/66b4251fb09c8b15587a0e7a/1723082016474/Aug24+Food+Menu.pdf"
+          target="_blank" class="gallery-link">
+          <img src="https://images.squarespace-cdn.com/content/v1/5d7bd1eb2135dd7f46a7ffab/679c68ab-cdf5-47a6-a077-ac1564b719f8/IMG_8304.jpeg?format=1000w" alt="Santa Catarina" />
+
+          <div class="gallery-overlay">
+            <h3>Santa Catarina</h3>
+            <p>Unbeatable margarita and appetizer specials</p>
+          </div>
+
+        </a>
+      </div>
+
+      <div class="gallery-column">
+        <div class="gallery-link">
+          <img src="https://www.grovewinebar.com/wp-content/uploads/2016/08/lakeway_grove_dining_room.jpg" alt="The Grove" />
+
+          <div class="gallery-overlay">
+            <h3>The Grove</h3>
+            <p>Mon - Fri 2 - 6 pm + Sat & Sun 3 - 6pm</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="gallery-column">
+        <div class="gallery-link">
+          <img src="https://images.squarespace-cdn.com/content/v1/6393bc48647524668746eda8/1675295957594-JQ889B72G7Z4K587BU2P/Next%25252BWeek%25252BBurger_5.jpg?format=2500w" alt="The League Kitchen & Bar" />
+
+          <div class="gallery-overlay">
+            <h3>The League Kitchen & Bar</h3>
+            <p>Modern architecture and city life captured beautifully</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="gallery-column">
+        <div class="gallery-link">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipNxznVxBKLsY-erHDpyJSY4Ar8PvXN924JrzqFl=w1200-h1301-p-k-no" alt="Cafe Blue" />
+
+          <div class="gallery-overlay">
+            <h3>Cafe Blue</h3>
+            <p>Inspiring workspaces for creative professionals</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="gallery-column">
+        <div class="gallery-link">
+          <img src="https://romanticspotsaustin.com/wp-content/uploads/2022/01/plate.jpeg" alt="Plate by Dzrinta" />
+
+          <div class="gallery-overlay">
+            <h3>Plate by Dzrinta</h3>
+            <p>The future of technology and creative tools</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const wrapper = document.getElementById('gallery-wrapper-eg-nas8pxii6');
+      if (!wrapper) return;
+
+      const columns = wrapper.querySelectorAll('.gallery-column');
+
+      columns.forEach(column => {
+        column.addEventListener('click', function(e) {
+          const isExpanded = this.classList.contains('expanded');
+
+          // Remove expanded from all columns
+          columns.forEach(c => c.classList.remove('expanded'));
+          wrapper.classList.remove('has-expanded');
+
+          // If this wasn't expanded, expand it (lock it open)
+          if (!isExpanded) {
+            this.classList.add('expanded');
+            wrapper.classList.add('has-expanded');
+            // Prevent link navigation on first click
+            const link = this.querySelector('a');
+            if (link) e.preventDefault();
+          }
+        });
+      });
+    })();
+  </script>
+
+  <div class="water-bar">
+    Today's current water level: <strong>74.3%</strong> &nbsp;•&nbsp; Updated weekly with the rest of the news around the lake.
+  </div>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <h2 class="lead-title">Cheers, Neighbor.</h2>
+    <p>Lake Travis happy hour isn't really about the discount. It's about the slow hour between work-mode and weekend-mode, the breeze coming off the water, and the bartender who already knows your order. We rounded up the best of it — broken out the way locals actually think about the lake: by neighborhood. From oak-shaded patios in Spicewood to sunset perches in Hudson Bend, here's where to land your 4-to-7.</p>
+  </section>
+
+  <!-- AREA NAV -->
+  <nav class="area-nav" aria-label="Jump to area">
+    <a href="#lakeway">Lakeway</a>
+    <a href="#bee-cave">Bee Cave</a>
+    <a href="#spicewood">Spicewood</a>
+    <a href="#hudson-bend">Hudson Bend</a>
+    <a href="#steiner-ranch">Steiner Ranch</a>
+    <a href="#lago-vista">Lago Vista</a>
+  </nav>
+
+  <!-- LAKEWAY -->
+  <section class="area" id="lakeway">
+    <div class="area-header">
+      <div class="area-title-wrap">
+        <h2>Lakeway</h2>
+      </div>
+      <div class="area-blurb">Where the after-work crowd is wearing tennis whites and the patios stretch toward the golf course.</div>
+    </div>
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-eyebrow">Mon–Fri · 3–6 PM</div>
+        <h3>The Grove Wine Bar &amp; Kitchen</h3>
+        <div class="when">Daily Happy Hour <span class="pipe">|</span> 3:00–6:00 PM</div>
+        <p class="deal"><strong>$2 off all wines by the glass</strong>, half-price flatbreads, and a rotating cocktail special the bartenders take personally.</p>
+        <p class="blurb">A wine list deep enough to disappear into and a patio that does not rush you out of it.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Lakeway</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Mon–Thu · 4–6 PM</div>
+        <h3>Lupe Tortilla</h3>
+        <div class="when">Weeknights <span class="pipe">|</span> 4:00–6:00 PM</div>
+        <p class="deal"><strong>$5 house margaritas</strong>, $3 Mexican beers, and queso priced like it's a civic duty.</p>
+        <p class="blurb">The fajita smoke alone is worth the drive — the rocks margs are the reason you stay.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Lakeway</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Tue–Sun · 4–6 PM</div>
+        <h3>360 Uno Trattoria</h3>
+        <div class="when">Aperitivo Hour <span class="pipe">|</span> 4:00–6:00 PM</div>
+        <p class="deal"><strong>Half-price Aperol spritzes</strong>, $7 select wines, and an antipasti board that quietly turns into dinner.</p>
+        <p class="blurb">As close to a Tuscan afternoon as you can get on 620 without renting a Vespa.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Lakeway</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Daily · 3–6 PM</div>
+        <h3>Travis Restaurant at Lakeway Resort</h3>
+        <div class="when">Lakeside Hour <span class="pipe">|</span> 3:00–6:00 PM</div>
+        <p class="deal"><strong>$8 specialty cocktails</strong>, $6 select wines, and a happy-hour menu heavy on shareable seafood.</p>
+        <p class="blurb">The view does most of the heavy lifting, and frankly, that's the whole point.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Lakeway</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Mon–Fri · 4–7 PM</div>
+        <h3>The Local Post Pub</h3>
+        <div class="when">Pub Hours <span class="pipe">|</span> 4:00–7:00 PM</div>
+        <p class="deal"><strong>$4 drafts</strong>, $5 well drinks, and bar bites priced for the long sit.</p>
+        <p class="blurb">A neighborhood pub that still feels like one — TVs on, voices low, regulars regular.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Lakeway</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- BEE CAVE -->
+  <section class="area" id="bee-cave">
+    <div class="area-header">
+      <div class="area-title-wrap">
+        <h2>Bee Cave</h2>
+      </div>
+      <div class="area-blurb">Hill Country Galleria's orbit — where shopping bags meet stemware before the sun's even down.</div>
+    </div>
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-eyebrow">Mon–Fri · 3–7 PM</div>
+        <h3>Stout Public House</h3>
+        <div class="when">Daily Pour <span class="pipe">|</span> 3:00–7:00 PM</div>
+        <p class="deal"><strong>$2 off all drafts</strong>, $5 select wines, and half-price flatbreads that move fast.</p>
+        <p class="blurb">A proper gastropub with the kind of patio that makes Tuesday feel like Friday.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Bee Cave</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Mon–Fri · 3–6:30 PM</div>
+        <h3>Roaring Fork</h3>
+        <div class="when">Bar &amp; Lounge Only <span class="pipe">|</span> 3:00–6:30 PM</div>
+        <p class="deal"><strong>$8 signature cocktails</strong>, $6 wines by the glass, and the famous green chile pork stew at half price.</p>
+        <p class="blurb">Old-school steakhouse energy without the old-school pretense — a quiet Galleria favorite.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Hill Country Galleria</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Tue–Sun · 3–6 PM</div>
+        <h3>Maudie's Hill Country</h3>
+        <div class="when">Mauditas Hour <span class="pipe">|</span> 3:00–6:00 PM</div>
+        <p class="deal"><strong>$5 frozen margaritas</strong>, $3 domestic drafts, and queso in two sizes — both correct.</p>
+        <p class="blurb">A Tex-Mex happy hour with no surprises and that's exactly why everyone shows up.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Bee Cave</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Mon–Fri · 3–6 PM</div>
+        <h3>BJ's Restaurant &amp; Brewhouse</h3>
+        <div class="when">Bar Area Only <span class="pipe">|</span> 3:00–6:00 PM</div>
+        <p class="deal"><strong>$2 off house brews</strong>, $5 appetizers, and a half-price flatbread tucked in the corner of the menu.</p>
+        <p class="blurb">Reliable, predictable, exactly the speed you want after a Galleria errand spiral.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Hill Country Galleria</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Mon–Fri · 3–6 PM</div>
+        <h3>Cover 3</h3>
+        <div class="when">Tap List Hour <span class="pipe">|</span> 3:00–6:00 PM</div>
+        <p class="deal"><strong>$5 drafts</strong>, half-price wines by the glass, and $6 happy hour bar bites.</p>
+        <p class="blurb">A sports bar that grew up — leather booths, real glassware, and the game still on.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Bee Cave</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SPICEWOOD -->
+  <section class="area" id="spicewood">
+    <div class="area-header">
+      <div class="area-title-wrap">
+        <h2>Spicewood</h2>
+      </div>
+      <div class="area-blurb">Where the AC is optional, the parking is gravel, and the live music is closer than you think.</div>
+    </div>
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-eyebrow">Daily · Open–6 PM</div>
+        <h3>Angel's Icehouse</h3>
+        <div class="when">All Afternoon <span class="pipe">|</span> Open till 6:00 PM</div>
+        <p class="deal"><strong>$4 domestic drafts</strong>, $5 frozen Painkillers, and a cheeseburger that earns its reputation.</p>
+        <p class="blurb">Picnic tables, oak trees, and the kind of crowd that came for one and stayed for four.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Spicewood</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Wed–Sun · 4–7 PM</div>
+        <h3>Poodie's Hilltop Roadhouse</h3>
+        <div class="when">Honky-Tonk Hour <span class="pipe">|</span> 4:00–7:00 PM</div>
+        <p class="deal"><strong>$3 Lone Stars</strong>, $5 well drinks, and chicken-fried whatever-you-want on special.</p>
+        <p class="blurb">A piece of Willie Nelson's Texas with the dance floor warmed up by sundown.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Spicewood</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Thu–Sat · 4–6 PM</div>
+        <h3>The Pub at Briarcliff</h3>
+        <div class="when">Lakeside Pub Hour <span class="pipe">|</span> 4:00–6:00 PM</div>
+        <p class="deal"><strong>$2 off drafts</strong>, $6 house wine, and a fish-and-chips plate doing serious work.</p>
+        <p class="blurb">Tucked-in pub vibes with a view that earns its keep when the sun starts dropping.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Briarcliff</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Sat–Sun · 11–3 PM</div>
+        <h3>Spicewood Vineyards</h3>
+        <div class="when">Weekend Tasting <span class="pipe">|</span> 11:00 AM–3:00 PM</div>
+        <p class="deal"><strong>$15 flights</strong>, $2 off bottles to-go, and a cheese plate big enough to share or not.</p>
+        <p class="blurb">A vineyard hour, technically — but the only happy hour where the bartender grew the grapes.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Spicewood</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- HUDSON BEND -->
+  <section class="area" id="hudson-bend">
+    <div class="area-header">
+      <div class="area-title-wrap">
+        <h2>Hudson Bend</h2>
+      </div>
+      <div class="area-blurb">The sunset side of the lake — where happy hour ends precisely when the western sky catches fire.</div>
+    </div>
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-eyebrow">Mon–Thu · 3–6 PM</div>
+        <h3>The Oasis on Lake Travis</h3>
+        <div class="when">Sunset of the World Hour <span class="pipe">|</span> 3:00–6:00 PM</div>
+        <p class="deal"><strong>$5 frozen margaritas</strong>, $4 domestic drafts, and half-price chips, salsa, and queso.</p>
+        <p class="blurb">Yes, it's touristy. Yes, the view still wins every single time.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Hudson Bend</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Daily · 3–6 PM</div>
+        <h3>Carlos 'n Charlie's</h3>
+        <div class="when">Cantina Hour <span class="pipe">|</span> 3:00–6:00 PM</div>
+        <p class="deal"><strong>$4 frozen margs</strong>, $3 Mexican beers, and tacos al pastor for under a five-spot.</p>
+        <p class="blurb">A dockside cantina with the kind of music volume that says the weekend started Wednesday.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Hudson Bend</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Tue–Fri · 4–6 PM</div>
+        <h3>Sundancer Grill</h3>
+        <div class="when">Marina Hour <span class="pipe">|</span> 4:00–6:00 PM</div>
+        <p class="deal"><strong>$6 specialty cocktails</strong>, $5 wines, and a smoked-fish dip plate worth ordering twice.</p>
+        <p class="blurb">A locals' bar that pretends not to be one — the marina view gives it away.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Hurst Harbor</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Wed–Sat · 5–6:30 PM</div>
+        <h3>Hudson's on the Bend</h3>
+        <div class="when">Bar Hour <span class="pipe">|</span> 5:00–6:30 PM</div>
+        <p class="deal"><strong>Half-price wines by the glass</strong> and a bar-menu of small plates from the kitchen that put this place on the map.</p>
+        <p class="blurb">The white tablecloths give a discount before dinner — a quiet little secret worth being early for.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Hudson Bend</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- STEINER RANCH -->
+  <section class="area" id="steiner-ranch">
+    <div class="area-header">
+      <div class="area-title-wrap">
+        <h2>Steiner Ranch</h2>
+      </div>
+      <div class="area-blurb">Family-table happy hours where the kids' menu shows up before the second round does.</div>
+    </div>
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-eyebrow">Mon–Fri · 4–6 PM</div>
+        <h3>Steiner Ranch Steakhouse</h3>
+        <div class="when">Hilltop Hour <span class="pipe">|</span> 4:00–6:00 PM</div>
+        <p class="deal"><strong>$8 signature cocktails</strong>, $6 wines, and the prime rib sliders that quietly hold the menu together.</p>
+        <p class="blurb">The view is famous, the patio is bigger than it looks, and the bar pours generously.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Steiner Ranch</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Mon–Fri · 3–6 PM</div>
+        <h3>Mandola's Italian Market</h3>
+        <div class="when">Aperitivo <span class="pipe">|</span> 3:00–6:00 PM</div>
+        <p class="deal"><strong>$5 house wines</strong>, $3 off bottles, and a $6 antipasti board that makes a decent dinner pretend.</p>
+        <p class="blurb">A neighborhood Italian where the espresso machine and the wine list share equal billing.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Steiner Ranch</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Tue–Fri · 3–6 PM</div>
+        <h3>Tony C's Coal Fired Pizza</h3>
+        <div class="when">Pie &amp; Pour <span class="pipe">|</span> 3:00–6:00 PM</div>
+        <p class="deal"><strong>$5 craft drafts</strong>, $6 select wines, and $2 off any pizza in the bar area.</p>
+        <p class="blurb">The pizza is the point; the happy hour just helps you commit to ordering a second one.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Steiner Ranch</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Mon–Thu · 4–6 PM</div>
+        <h3>ZuZu Handmade Mexican Food</h3>
+        <div class="when">Cantina Hour <span class="pipe">|</span> 4:00–6:00 PM</div>
+        <p class="deal"><strong>$5 house margaritas</strong>, $4 Mexican beers, and a half-price queso list that's genuinely a list.</p>
+        <p class="blurb">A neighborhood Tex-Mex with the kind of patio that makes the school-pickup hour disappear.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Steiner Ranch</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- LAGO VISTA -->
+  <section class="area" id="lago-vista">
+    <div class="area-header">
+      <div class="area-title-wrap">
+        <h2>Lago Vista</h2>
+      </div>
+      <div class="area-blurb">The far side of the lake, where the happy hour starts earlier and nobody's clocking when it ends.</div>
+    </div>
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-eyebrow">Daily · Open–6 PM</div>
+        <h3>Gnarly Gar</h3>
+        <div class="when">All-Day Hour <span class="pipe">|</span> Open till 6:00 PM</div>
+        <p class="deal"><strong>$3 domestic drafts</strong>, $5 frozen drinks, and a $7 burger that comes with a story.</p>
+        <p class="blurb">A lakeside dive in the best way — the floor is sticky on purpose, and the sunset is free.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Lago Vista</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Thu–Sun · 3–6 PM</div>
+        <h3>Pier 7</h3>
+        <div class="when">Dockside Hour <span class="pipe">|</span> 3:00–6:00 PM</div>
+        <p class="deal"><strong>$5 house cocktails</strong>, $4 drafts, and shrimp tacos at a price that feels like a typo.</p>
+        <p class="blurb">A real dockside hour — where the boats tie up, the regulars wave, and nobody's checking phones.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Lago Vista</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Mon–Fri · 3–6 PM</div>
+        <h3>Coyote Bar &amp; Grill</h3>
+        <div class="when">Backroad Hour <span class="pipe">|</span> 3:00–6:00 PM</div>
+        <p class="deal"><strong>$3 Lone Stars</strong>, $5 margaritas, and half-off chips and salsa that have somehow gotten famous.</p>
+        <p class="blurb">A roadhouse in the truest sense, with regulars who remember each other's grandkids.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Lago Vista</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-eyebrow">Fri–Sun · 4–7 PM</div>
+        <h3>Highland Lakes Tavern</h3>
+        <div class="when">Tavern Hour <span class="pipe">|</span> 4:00–7:00 PM</div>
+        <p class="deal"><strong>$2 off drafts</strong>, $6 wines, and a chili-cheese fry plate priced for sharing.</p>
+        <p class="blurb">A worn-in spot with a wraparound porch and a tap list that keeps surprising you.</p>
+        <div class="card-foot">
+          <span class="place"><span class="pin"></span> Lago Vista</span>
+          <a href="#">Details →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FINE PRINT -->
+  <p class="fine-print">Hours and pricing are the best we know as of this issue — but happy hours have a way of shifting with the season. Call ahead, especially on holidays and after a freeze warning. Got a spot we missed? Hit reply and tell us.</p>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <h2>Stay in the Current.</h2>
+    <p>Get the best of the lake — events, openings, music, and the occasional honest restaurant tip — delivered free every Thursday.</p>
+    <a href="https://www.laketraviscurrent.com/" class="cta-btn">Subscribe</a>
+  </section>
+</main>
+<footer class="ltc-sitefoot">
+  <div class="ltc-foot-in">
+    <div>
+      <h4>Read</h4>
+      <ul>
+        <li><a href="https://www.laketraviscurrent.com/">Latest Issue</a></li>
+        <li><a href="https://www.laketraviscurrent.com/archive">Archive</a></li>
+        <li><a href="https://www.laketraviscurrent.com/subscribe">Subscribe</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Discover</h4>
+      <ul>
+        <li><a href="/events/">Local Events</a></li>
+        <li><a href="/live-music/">Live Music</a></li>
+        <li><a href="/happy-hours/">Happy Hours</a></li>
+        <li><a href="/restaurants/">Restaurants</a></li>
+        <li><a href="/farmers-markets/">Farmers Markets</a></li>
+        <li><a href="/community-updates/">Community Updates</a></li>
+        <li><a href="/features/">Features &amp; Guides</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>About</h4>
+      <ul>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/advertise/">Advertise</a></li>
+        <li><a href="/submit-event/">Submit an Event</a></li>
+        <li><a href="/meet-your-neighbor/">Meet Your Neighbor</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ltc-foot-bottom">&copy; 2026 Lake Travis Current.</div>
+</footer>
+</body>
+</html>
